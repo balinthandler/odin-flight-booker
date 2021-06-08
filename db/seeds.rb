@@ -6,9 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-airports = Airport.create([{ code: 'SFO'}, { code: 'NYC'}])
+#airports = Airport.create([{ code: 'SFO'}, { code: 'NYC'}])
 
-flights = Flight.create([{ start_id: '7', finish_id: '8', start_datetime: "2021-07-05,12:20", flight_duration: "07:05" },
-{ start_id: '7', finish_id: '8', start_datetime: "2021-07-06,07:10", flight_duration: "07:05" },
+# flights = Flight.create([{ start_id: '7', finish_id: '8', start_datetime: "2021-07-05,12:20", flight_duration: "07:05" },
+# { start_id: '7', finish_id: '8', start_datetime: "2021-07-06,07:10", flight_duration: "07:05" },
 
+# ])
+
+flights = Flight.create([
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, start_datetime: "2021-07-05,12:20", flight_duration: "07:05" },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, start_datetime: "2021-07-06,12:20", flight_duration: "07:50" },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, start_datetime: "2021-07-07,12:20", flight_duration: "06:05" },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, start_datetime: "2021-07-08,12:20", flight_duration: "07:05" },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, start_datetime: "2021-07-09,12:20", flight_duration: "08:05" },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, start_datetime: "2021-07-10,12:20", flight_duration: "07:35" },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, start_datetime: "2021-07-11,12:20", flight_duration: "07:45" },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, start_datetime: "2021-07-12,12:20", flight_duration: "11:05" },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, start_datetime: "2021-07-13,12:20", flight_duration: "07:25" },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, start_datetime: "2021-07-14,12:20", flight_duration: "07:15" },
 ])

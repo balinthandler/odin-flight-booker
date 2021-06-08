@@ -1,0 +1,20 @@
+<%= form_with model: @flight do |f| %>
+  <table class="table">
+    <thead>
+      <th>From</th>
+      <th>To</th>
+    </thead>
+    <tbody>
+      <td>
+        <div class="select">
+          <%= f.select(:start_id, @airports) %>
+        </div>
+      </td>
+      <td>
+        <div class="select">
+          <%= f.select(:finish_id, @airports) %>
+        </div>
+      </td>
+    </tbody>
+  </table>
+<% end %>
