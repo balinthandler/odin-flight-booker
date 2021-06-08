@@ -44,6 +44,10 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Guard
+  gem 'guard', '~> 2.17'
+  # Guard-Livereload
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 end
 
 group :test do
