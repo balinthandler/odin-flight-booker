@@ -14,8 +14,17 @@
  *= require_self
  */
 
- @import "bulma";
+@import "bulma";
 
- .navbar-brand .title {
+.navbar-brand .title {
   color: white;
+}
+
+.table.center {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+.centered {
+  text-align: center;
 }

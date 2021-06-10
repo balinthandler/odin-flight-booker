@@ -1,9 +1,10 @@
-<%= form_with model: @flight do |f| %>
-  <table class="table">
+<%= form_with(model: @flight, method: "GET") do |f| %>
+  <table class="table center">
     <thead>
       <th>From</th>
       <th>To</th>
       <th>Date</th>
+      <th>Passengers</th>
     </thead>
     <tbody>
       <td>
@@ -18,9 +19,24 @@
       </td>
       <td>
         <div class="select">
-          <%= f.select(:start_datetime, @dates) %>
+          <%= f.select(:departure_date, @dates) %>
         </div>
       </td>
+      <td>
+        <div class="select">
+          <%= f.select(:passengers, @passengers) %>
+        </div>
+      </td>
+      <td>
+      </td>
+      
     </tbody>
   </table>
+  <div class="centered">
+    <%= f.button "Search Flights", class: "button is-info centered"%>
+  </div>
+
+  <div class="section">
+
+  </div>
 <% end %>
