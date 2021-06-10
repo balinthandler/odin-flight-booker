@@ -3,6 +3,7 @@
     <thead>
       <th>From</th>
       <th>To</th>
+      <th>Date</th>
     </thead>
     <tbody>
       <td>
@@ -13,6 +14,11 @@
       <td>
         <div class="select">
           <%= f.select(:finish_id, @airports) %>
+        </div>
+      </td>
+      <td>
+        <div class="select">
+          <%= f.select(:start_datetime, @dates) %>
         </div>
       </td>
     </tbody>
