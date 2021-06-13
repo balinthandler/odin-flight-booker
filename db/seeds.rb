@@ -13,15 +13,43 @@
 
 # ])
 
-flights = Flight.create([
-  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-05", departure_time: "08:15", flight_duration: "07:05" },
-  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-06", departure_time: "05:45", flight_duration: "07:50" },
-  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-07", departure_time: "11:15", flight_duration: "06:05" },
-  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-08", departure_time: "17:05", flight_duration: "07:05" },
-  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-09", departure_time: "18:15", flight_duration: "08:05" },
-  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-10", departure_time: "20:55", flight_duration: "07:35" },
-  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-11", departure_time: "10:45", flight_duration: "07:45" },
-  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-12", departure_time: "12:05", flight_duration: "11:05" },
-  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-13", departure_time: "13:35", flight_duration: "07:25" },
-  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-14", departure_time: "14:25", flight_duration: "07:15" },
+
+
+Flight.create([
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-05", departure_time: "07:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-05", departure_time: "08:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-05", departure_time: "09:00", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-05", departure_time: "10:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-05", departure_time: "12:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-05", departure_time: "14:55", flight_duration: 60*60*7 },
+  
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-05", departure_time: "07:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-05", departure_time: "09:00", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-05", departure_time: "12:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-05", departure_time: "14:55", flight_duration: 60*60*7 },
+  
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-06", departure_time: "07:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-06", departure_time: "08:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-06", departure_time: "09:00", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-06", departure_time: "10:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-06", departure_time: "12:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-06", departure_time: "14:55", flight_duration: 60*60*7 },
+  
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-06", departure_time: "07:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-06", departure_time: "09:00", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-06", departure_time: "12:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-06", departure_time: "14:55", flight_duration: 60*60*7 },
+
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-07", departure_time: "07:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-07", departure_time: "08:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-07", departure_time: "09:00", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-07", departure_time: "10:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-07", departure_time: "12:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "SFO").id, finish_id: Airport.find_by(code: "NYC").id, departure_date: "2021-07-07", departure_time: "14:55", flight_duration: 60*60*7 },
+  
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-07", departure_time: "07:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-07", departure_time: "09:00", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-07", departure_time: "12:55", flight_duration: 60*60*7 },
+  { start_id: Airport.find_by(code: "NYC").id, finish_id: Airport.find_by(code: "SFO").id, departure_date: "2021-07-07", departure_time: "14:55", flight_duration: 60*60*7 },
+
 ])

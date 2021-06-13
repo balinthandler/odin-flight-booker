@@ -12,13 +12,14 @@
   </head>
 
   <body>
-    <nav class="navbar is-primary">
-      <div class="navbar-brand">
-        <%= link_to root_path, class: "navbar-item" do %>
-          <h1 class="title is-5">Odin Flight Booker</h1>
-        <% end %>
+    <div class="section">
+      <div class="title is-1 centered">
+        <%= link_to "Odin Flight Booker", root_path %>
       </div>
-    </nav>
+      <div class="title is-5 centered">
+        book your flight today
+      </div>
+    </div>
 
     <%= yield %>
   </body>

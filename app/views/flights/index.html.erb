@@ -4,45 +4,11 @@
       <div class="column is-half">
         <div class="box">
           <%= render 'search_form' %>
-          <% unless @result.empty? %>
-              <table class="table center">
-                <thead>
-                  <th>From</th>
-                  <th>To</th>
-                  <th>Date</th>
-                  <th>Departure</th>
-                  <th></th>
-                </thead>
-                <tbody>
-                <% @result.each_with_index do |flight, index| %>
-                  <td>
-                    <div class="block">
-                      <%= flight.from_airport.code %>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="block">
-                      <%= flight.to_airport.code %>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="block">
-                      <%= flight.departure_date %>
-                    </div>
-                  </td>
-                  <td>
-                    <div class="block">
-                      <%= flight.departure_time.strftime("%H\:%M") %>
-                    </div>
-                  </td>
-                  <td>
-                    <%= link_to "Book Flight", class: "button is-info" %>
-                  </td>
-                  
-                </tbody>
-              </table>
-            <% end %>
+          <div class="section">
+          <% unless @result.nil? %>
+            <%= render 'result' %>
           <% end %>
+          </div>
         </div>
       </div>
     </div>
