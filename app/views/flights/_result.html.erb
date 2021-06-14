@@ -47,7 +47,7 @@
           </div>
         <% end %>
         <%= form.hidden_field :passengers, :value => params[:flight][:passengers] %>
-        <%= form.submit "Book Flight" %>
+        <%= form.submit "Book Flight", class: "button is-info" %>
       <% end %>
     </div>
   <% else %>
