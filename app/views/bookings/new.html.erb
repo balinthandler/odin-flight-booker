@@ -20,11 +20,11 @@
                 </div>
                 <div class="level-item">
                   <span><i class="far fa-clock"></i></span>
-                  Arrival: <%= Time.at(@flight.flight_duration).strftime("%H\:%M")%>
+                  Duration: <%= Time.at(@flight.flight_duration).strftime("%H\:%M")%>
                 </div>
                 <div class="level-item">
                   <span><i class="fas fa-plane-arrival"></i></span>
-                  <%= (@flight.departure_time + @flight.flight_duration).strftime("%H\:%M") %>
+                  Arrival: <%= (@flight.departure_time + @flight.flight_duration).strftime("%H\:%M") %>
                 </div>
               </div>
             </div>
@@ -33,12 +33,11 @@
             </div>
             <div class="block">
               <%= form_with model: @booking do |f|%>
+                  <% index = 1 %>
                   <%= f.fields_for :passengers do |pf|%>
                     <div class="block">
+                      <%= "Passenger #{index}" %>
                       <div class="block">
-                        <p>
-                          Passenger
-                        </p>
                         <br />
                         <%= pf.text_field :name, placeholder: "Name", class: "input", required: true, value: "" %>
                       </div>
@@ -47,6 +46,7 @@
                       </div>
                     </div>
                     <br />
+                    <% index += 1 %> 
                   <% end %>
                 <%= f.hidden_field :flight_id, value: params[:flight_id]%>
                 <%= f.submit "Submit booking", class: "button is-info"%>
