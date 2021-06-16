@@ -5,7 +5,7 @@ class CreateFlights < ActiveRecord::Migration[6.1]
       t.integer :finish_id
       t.date :departure_date
       t.time :departure_time
-      t.time :flight_duration
+      t.integer :flight_duration
 
       t.timestamps
     end
