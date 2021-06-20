@@ -48,6 +48,8 @@ group :development do
   gem 'guard', '~> 2.17'
   # Guard-Livereload
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
+  # Letter Opener
+  gem 'letter_opener', '~> 1.7'
 end
 
 group :test do
