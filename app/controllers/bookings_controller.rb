@@ -11,7 +11,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.create(booking_params)
-    redirect_to booking_path(@booking)
+    if @booking.save
+      UserMailer.with(booking_id: @booking.id).thank_you.deliver_now
+      redirect_to booking_path(@booking)
+    end
   end
 
   private
